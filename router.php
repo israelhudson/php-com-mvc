@@ -3,8 +3,13 @@
 $router = new SON\Router;
 
 $router['/'] = [
-    'controller' => App\Controllers\UsersController::class,
+    'class' => App\Controllers\UsersController::class,
     'action' => 'index'
     ];
+
+$router['/registro'] = [
+    'class' => App\Controllers\UsersController::class,
+    'action' => 'create'
+];
 
 return $router;
